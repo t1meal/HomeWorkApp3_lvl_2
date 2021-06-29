@@ -19,10 +19,22 @@ public class Main {
 	            hm.put(b, hm.get(b)+1);
            } else{  hm.put(b,1); }
        }
-
 	   System.out.println("Список уникальных слов: " + hm.keySet());
 	   System.out.println("Количество повторений: " + hm);
 
+
+	   PhoneBook phoneBook = new PhoneBook();
+
+	   phoneBook.add("Матвей", "44-01-25");
+	   phoneBook.add("Матвей", "45-80-21");
+	   phoneBook.add("Павел", "54-20-21");
+	   phoneBook.add("Евгений", "21-54-20");
+	   phoneBook.add("Евгений", "45-81-21");
+
+	   phoneBook.findPrint("Матвей");
+	   phoneBook.findPrint("Павел");
+	   phoneBook.findPrint("Евгений");
+	   phoneBook.findPrint("Роман");
     }
 }
 
